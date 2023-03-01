@@ -1,0 +1,15 @@
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\bin\Debug\net6.0\ParkingService.exe
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\bin\Debug\net6.0\ParkingService.deps.json
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\bin\Debug\net6.0\ParkingService.runtimeconfig.json
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\bin\Debug\net6.0\ParkingService.dll
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\bin\Debug\net6.0\ParkingService.pdb
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ParkingService.csproj.AssemblyReference.cache
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ParkingService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ParkingService.AssemblyInfoInputs.cache
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ParkingService.AssemblyInfo.cs
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ParkingService.csproj.CoreCompileInputs.cache
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ParkingService.dll
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\refint\ParkingService.dll
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ParkingService.pdb
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ParkingService.genruntimeconfig.cache
+C:\Users\Room203-00\source\repos\ParkingService\ParkingService\obj\Debug\net6.0\ref\ParkingService.dll
