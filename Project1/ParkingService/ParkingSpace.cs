@@ -10,8 +10,8 @@ namespace ParkingService
     {
         public string SpaceID { get; private set; }
         public bool Availability { get; private set; }
-        public decimal PricePerHour { get; private set; }
-        public double Area { get; private set; }
+        public decimal PricePerHour { get; private set; } // In Pesos
+        public double Area { get; private set; } // The area in meters 
         public Accesibility Accessibility { get; private set; }
         public ParkingLot Lot;
 
@@ -49,6 +49,14 @@ namespace ParkingService
             // Else -> occupied since not available
 
             return !this.Availability;
+        }
+
+        public decimal TotalCost(DateTime inTime, DateTime outTime)
+        {
+            // The formula for getting a cost for staying in a certain parking space
+            // The formula is subjective:
+            // total cost = (out - in) * (area of parking space / 100) + (price per hour * accessibility)
+            return ((decimal)(outTime - inTime).TotalMinutes) * (decimal)(this.Area / 100) + (this.PricePerHour * ((int)this.Accessibility));
         }
     }
 }

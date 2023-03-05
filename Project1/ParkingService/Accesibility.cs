@@ -26,6 +26,6 @@ namespace ParkingService
         ///     flexibility, the accessibility will be determined by its corresponding parking lot structure.
         /// </summary>
         /// 
-        None, Easy, Medium, Hard
+        None = 0, Easy = 20, Medium = 10, Hard = 5
     }
 }
