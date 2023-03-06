@@ -13,7 +13,7 @@ namespace ParkingService
         public string Location { get; set; }
         public int MaxCapacity { get; private set; }
         public decimal RatePerHour { get; set; }
-        public List<ParkingSpace> Spaces;
+        private List<ParkingSpace> Spaces;
 
         public ParkingLot(string branchid, string branchname, string location, int maxcap, decimal rph) 
         {
@@ -32,6 +32,10 @@ namespace ParkingService
             this.MaxCapacity = sp.Count;
             this.RatePerHour = rph;
             this.Spaces = sp;
+        }
+        public int GetTotalParkingSpaces()
+        {
+            return this.Spaces.Count;
         }
 
         public void SetMaxCapacity(int newCapacity)

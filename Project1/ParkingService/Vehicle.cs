@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ParkingService
 {
-    public abstract class Vehicle
+    public class Vehicle
     {
         public string PlateID { get; private set; }
         public User Owner{ get; private set; }

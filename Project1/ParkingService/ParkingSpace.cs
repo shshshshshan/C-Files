@@ -15,6 +15,16 @@ namespace ParkingService
         public Accesibility Accessibility { get; private set; }
         public ParkingLot Lot;
 
+        public ParkingSpace(string spaceid, decimal pph, ParkingLot lot)
+        {
+            this.SpaceID = spaceid;
+            this.Availability = true;
+            this.PricePerHour = pph;
+            this.Lot = lot;
+            this.Area = 0.0;
+            this.Accessibility = Accesibility.None;
+        }
+
         public ParkingSpace(string spaceid, bool availability, decimal pph, ParkingLot lot)
         {
             this.SpaceID = spaceid;
@@ -56,7 +66,7 @@ namespace ParkingService
             // The formula for getting a cost for staying in a certain parking space
             // The formula is subjective:
             // total cost = (out - in) * (area of parking space / 100) + (price per hour * accessibility)
-            return ((decimal)(outTime - inTime).TotalMinutes) * (decimal)(this.Area / 100) + (this.PricePerHour * ((int)this.Accessibility));
+            return ((decimal)(outTime - inTime).TotalMinutes) * (decimal)(this.Area / this.Lot.GetTotalParkingSpaces()) + (this.PricePerHour * ((int)this.Accessibility));
         }
     }
 }

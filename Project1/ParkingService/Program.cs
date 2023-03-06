@@ -29,6 +29,11 @@ internal class Program
          *              program is poised to become a valuable tool for both parking lot
          *              owners and users alike.
          */
+        var ps = new List<ParkingSpace>(30);
+        var ps1 = new ParkingSpace("ORM01A01",)
+        
+        ParkingLot pl = new ParkingLot("ORM01A", "Ormoc Branch", "Ormoc City", 5m, ps);
+        
     }
 
     public static void LandingPage()
