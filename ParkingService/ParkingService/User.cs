@@ -9,12 +9,28 @@ namespace ParkingService
 {
     public class User
     {
-        public string Username { get; set; }
-        public string FullName { get; set; }
-        public string Email { get; set; }
-        public string ContactNumber { get; set; }
-        public string Country { get; set; }
-        public List<Vehicle> Vehicles { get; set; }
+        public string Username { get; private set; }
+        public string FullName { get; private set; }
+        public string Email { get; private set; }
+        public string ContactNumber { get; private set; }
+        public string Country { get; private set; }
+        private List<Vehicle> vehicles;
+        public List<Vehicle> Vehicles
+        {
+            get 
+            {
+                return new List<Vehicle>(vehicles);
+            }
+        }
+        private List<ParkingSpace> parkingSpaces;
+        public List<ParkingSpace> ParkingSpaces
+        {
+            get
+            {
+                return new List<ParkingSpace>(parkingSpaces);
+            }
+        }
+
 
         public User(string username, string fullname, string email, string contactNumber, string country)
         {
@@ -23,12 +39,18 @@ namespace ParkingService
             this.Email = email;
             this.ContactNumber = contactNumber;
             this.Country = country;
-            this.Vehicles = new List<Vehicle>();
+            this.vehicles = new List<Vehicle>();
+            this.parkingSpaces = new List<ParkingSpace>();
         }
 
-        public void addVehicle(Vehicle vehicle) 
+        public void AddVehicle(Vehicle vehicle) 
         {
-            this.Vehicles.Add(vehicle);
+            this.vehicles.Add(vehicle);
+        }
+
+        public void AddParkingSpace(ParkingSpace space)
+        {
+            this.parkingSpaces.Add(space);
         }
 
         public static bool checkUsername(string username) 

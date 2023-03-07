@@ -13,14 +13,14 @@ namespace ParkingService
         public decimal PricePerHour { get; private set; } // In Pesos
         public double Area { get; private set; } // The area in meters 
         public Accesibility Accessibility { get; private set; }
-        public ParkingLot Lot;
+        private ParkingLot lot;
 
         public ParkingSpace(string spaceid, decimal pph, ParkingLot lot)
         {
             this.SpaceID = spaceid;
             this.Availability = true;
             this.PricePerHour = pph;
-            this.Lot = lot;
+            this.lot = lot;
             this.Area = 0.0;
             this.Accessibility = Accesibility.None;
         }
@@ -30,7 +30,7 @@ namespace ParkingService
             this.SpaceID = spaceid;
             this.Availability = availability;
             this.PricePerHour = pph;
-            this.Lot = lot;
+            this.lot = lot;
             this.Area = 0.0;
             this.Accessibility = Accesibility.None;
         }
@@ -39,7 +39,7 @@ namespace ParkingService
             this.SpaceID = spaceid;
             this.Availability = availability;
             this.PricePerHour = pph;
-            this.Lot = lot;
+            this.lot = lot;
             this.Area = a;
             this.Accessibility = Accesibility.None;
         }
@@ -48,7 +48,7 @@ namespace ParkingService
             this.SpaceID = spaceid;
             this.Availability = availability;
             this.PricePerHour = pph;
-            this.Lot = lot;
+            this.lot = lot;
             this.Area = a;
             this.Accessibility = accessibility;
         }
@@ -66,7 +66,7 @@ namespace ParkingService
             // The formula for getting a cost for staying in a certain parking space
             // The formula is subjective:
             // total cost = (out - in) * (area of parking space / 100) + (price per hour * accessibility)
-            return ((decimal)(outTime - inTime).TotalMinutes) * (decimal)(this.Area / this.Lot.GetTotalParkingSpaces()) + (this.PricePerHour * ((int)this.Accessibility));
+            return ((decimal)(outTime - inTime).TotalMinutes) * (decimal)(this.Area / this.lot.GetTotalParkingSpaces()) + (this.PricePerHour * ((int)this.Accessibility));
         }
     }
 }
